@@ -1,0 +1,58 @@
+import alchemy.elements
+import alchemy
+
+if __name__ == "__main__":
+    print("\n=== Sacred Scroll Mastery ===\n")
+    print("Testing direct module access:")
+    try:
+        print("alchemy.elements.create_fire():", end=" ")
+        print(alchemy.elements.create_fire())
+    except AttributeError:
+        print("AttributeError - not exposed")
+    try:
+        print("alchemy.elements.create_water():", end=" ")
+        print(alchemy.elements.create_water())
+    except AttributeError:
+        print("AttributeError - not exposed")
+    try:
+        print("alchemy.elements.create_earth():", end=" ")
+        print(alchemy.elements.create_earth())
+    except AttributeError:
+        print("AttributeError - not exposed")
+    try:
+        print("alchemy.elements.create_air():", end=" ")
+        print(alchemy.elements.create_air())
+    except AttributeError:
+        print("AttributeError - not exposed")
+    print("\nTesting package-level access (controlled by __init__.py):")
+    try:
+        print("alchemy.create_fire():", end=" ")
+        print(alchemy.create_fire())
+    except AttributeError:
+        print("AttributeError - not exposed")
+    try:
+        print("alchemy.create_water():", end=" ")
+        print(alchemy.create_water())
+    except AttributeError:
+        print("AttributeError - not exposed")
+    try:
+        print("alchemy.create_earth():", end=" ")
+        print(alchemy.create_earth())
+    except AttributeError:
+        print("AttributeError - not exposed")
+    try:
+        print("alchemy.create_air():", end=" ")
+        print(alchemy.create_air())
+    except AttributeError:
+        print("AttributeError - not exposed")
+    print("\nPackage metadata:")
+    try:
+        print("Version:", end=" ")
+        print(alchemy.__version__)
+    except AttributeError:
+        print("AttributeError - not exposed")
+    try:
+        print("Author:", end=" ")
+        print(alchemy.__author__)
+    except AttributeError:
+        print("AttributeError - not exposed")
