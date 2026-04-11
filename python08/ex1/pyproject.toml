@@ -1,0 +1,11 @@
+[project]
+name = "loading"
+version = "0.1.0"
+description = "Matrix Data Analysis"
+authors = [{name = "abdessamad"}]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy (==1.25.0)",
+    "matplotlib (==3.7.2)",
+    "pandas (==2.1.0)"
+]
